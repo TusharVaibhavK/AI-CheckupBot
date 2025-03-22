@@ -7,7 +7,6 @@ import hashlib
 import pickle
 import pandas as pd
 
-
 # Mongo atlas connection
 
 from pymongo.mongo_client import MongoClient
@@ -28,9 +27,6 @@ def get_db_connection():
 
 # Page configuration
 st.set_page_config(page_title="Patient Daily Checkup System", layout="wide")
-
-st.write(st.secrets)
-
 
 # Initialize session state variables if they don't exist
 if 'patient_info' not in st.session_state:
@@ -500,15 +496,11 @@ def show_patient_checkup():
     with st.sidebar:
         st.title("🏥 PatientInfo")
 
-        # API Key Input
-        # nvidia_api_key = st.text_input(
-        #     "NVIDIA NIM API Key", value="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", type="password")
-        # if nvidia_api_key:
-        #     st.session_state.nvidia_api_key = nvidia_api_key
-
-        # nvidia_api_key=st.secrets["api_key"]
-        nvidia_api_key = st.secrets["nvidia"]["api_key"]
-
+        API Key Input
+        nvidia_api_key = st.text_input(
+            "NVIDIA NIM API Key", value="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", type="password")
+        if nvidia_api_key:
+            st.session_state.nvidia_api_key = nvidia_api_key
 
         st.divider()
 
