@@ -427,7 +427,7 @@ def show_doctor_dashboard():
             st.session_state.user_type = None
             st.session_state.username = None
             st.session_state.page = "login"
-            st.experimental_rerun()
+            st.rerun()()
 
     # Get all reports if not already loaded
     if not st.session_state.all_reports:
@@ -509,7 +509,7 @@ def show_patient_checkup():
             st.session_state.user_type = None
             st.session_state.username = None
             st.session_state.page = "login"
-            st.experimental_rerun()
+            st.rerun()()
 
         # Only show patient info input if not already submitted today
         if not st.session_state.submitted:
@@ -648,7 +648,7 @@ def show_patient_checkup():
                 st.session_state.answers = {}
                 st.session_state.summary = ""
                 st.session_state.summary_file_path = ""
-                st.experimental_rerun()
+                st.rerun()
     else:
         st.info(
             "Please enter patient information in the sidebar to begin the daily checkup.")
