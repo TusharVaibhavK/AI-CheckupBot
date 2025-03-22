@@ -7,7 +7,6 @@ import hashlib
 import pickle
 import pandas as pd
 
-st.write(st.secrets)
 
 # Mongo atlas connection
 
@@ -29,6 +28,9 @@ def get_db_connection():
 
 # Page configuration
 st.set_page_config(page_title="Patient Daily Checkup System", layout="wide")
+
+st.write(st.secrets)
+
 
 # Initialize session state variables if they don't exist
 if 'patient_info' not in st.session_state:
