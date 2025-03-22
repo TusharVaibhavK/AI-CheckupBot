@@ -7,6 +7,8 @@ import hashlib
 import pickle
 import pandas as pd
 
+st.write(st.secrets)
+
 # Mongo atlas connection
 
 from pymongo.mongo_client import MongoClient
