@@ -358,7 +358,7 @@ def show_login_page():
                         st.session_state.page = "patient_checkup"
 
                     st.success(f"Logged in as {user_type}: {username}")
-                    st.experimental_rerun()
+                    st.rerun()
                 else:
                     st.error("Invalid username, password or user type")
             else:
