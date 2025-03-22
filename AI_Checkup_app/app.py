@@ -502,6 +502,8 @@ def show_patient_checkup():
         # if nvidia_api_key:
         #     st.session_state.nvidia_api_key = nvidia_api_key
 
+        nvidia_api_key=st.secrets["api_key"]
+
         st.divider()
 
         if st.button("Logout"):
