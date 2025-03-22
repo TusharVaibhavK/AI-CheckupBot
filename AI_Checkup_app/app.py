@@ -496,7 +496,7 @@ def show_patient_checkup():
     with st.sidebar:
         st.title("🏥 PatientInfo")
 
-        API Key Input
+        #API Key Input
         nvidia_api_key = st.text_input(
             "NVIDIA NIM API Key", value="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", type="password")
         if nvidia_api_key:
